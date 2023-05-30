@@ -29,6 +29,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //ROUTES
 app.use('/api/reddit', redditRouter);
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
 //MIDDLEWARE
 app.use(errorHandler);
 
