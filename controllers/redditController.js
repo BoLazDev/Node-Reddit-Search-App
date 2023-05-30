@@ -12,6 +12,7 @@ const simulateFailedRequest = (cb) => {
 
 const redditSearch = asyncHandler(async (req, res, next) => {
     const { qSearch } = req.body;
+    console.log("SEARCH :", qSearch);
     try {
         //Fetch the data from reddit
         const response = await axios.get(`${URL}?q=${qSearch}&sort=new`);
