@@ -29,10 +29,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //ROUTES
 app.use('/api/reddit', redditRouter);
 
-app.get('/', (req, res) => {
-  res.send('Welcome to Reddit App);
-});
-
 //MIDDLEWARE
 app.use(errorHandler);
 
