@@ -30,7 +30,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/api/reddit', redditRouter);
 
 //MIDDLEWARE
-app.use(errorHandler)
+app.use(errorHandler);
+
+app.get('/', (req, res) => {
+  res.send('Welcome to Reddit App);
+});
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port :${PORT}`);
